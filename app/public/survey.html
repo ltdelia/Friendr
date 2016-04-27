@@ -6,7 +6,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+	<!-- Latest compiled and minified JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	<title>Friendr | Start here.</title>
 
@@ -28,44 +31,231 @@
 			<h4>Name (required)</h4>
 			<input type="name" class="form-control" id="name" placeholder="John Smith">		
 			<h4>Link to Your Photo (required)</h4>
-			<input type="name" class="form-control" id="name" placeholder="http://www.instagram.com">		
+			<input type="name" class="form-control" id="photo" placeholder="http://www.instagram.com">		
 		</div>
-
-		<div class="row">
-			<h1>All About You!</h1>
-			<h4>Name (required)</h4>
-
-
 
 		<!-- 10 questions -->
 
-		<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+		<div class="row">
+			<h1>Question 1</h1>
+			<h4>My ideal Saturday night is at home, curled up with a hot cup of tea and a good book.</h4>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Select your answer here
+				<span class="caret"></span>
+				</button>
+				<select data-placeholder  id="q1">
+					<option value></option>
+					<option value="1">1 (Strongly Disagree) </option>
+					<option value="2">2 </option>
+					<option value="3">3 </option>
+					<option value="4">4 </option>
+					<option value="5">5 (Strongly Agree) </option>
+				</select>
+				<div id="result"></div>
+			</div>
+		</div>
 
+		<div class="row">
+			<h1>Question 2</h1>
+			<h4>I tend to make my decisions based on my gut, instead of my brain.</h4>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Select your answer here
+				<span class="caret"></span>
+				</button>
+				<select data-placeholder  id="q2">
+					<option value></option>
+					<option value="1">1 (Strongly Disagree) </option>
+					<option value="2">2 </option>
+					<option value="3">3 </option>
+					<option value="4">4 </option>
+					<option value="5">5 (Strongly Agree) </option>
+				</select>
+				<div id="result"></div>
+			</div>
+		</div>
 
+		<div class="row">
+			<h1>Question 3</h1>
+			<h4>I find myself most awake when surrounded by a group of people.</h4>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Select your answer here
+				<span class="caret"></span>
+				</button>
+				<select data-placeholder  id="q3">
+					<option value></option>
+					<option value="1">1 (Strongly Disagree) </option>
+					<option value="2">2 </option>
+					<option value="3">3 </option>
+					<option value="4">4 </option>
+					<option value="5">5 (Strongly Agree) </option>
+				</select>
+				<div id="result"></div>
+			</div>
+		</div>
 
+		<div class="row">
+			<h1>Question 4</h1>
+			<h4>I find myself most awake when surrounded by a group of people.</h4>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Select your answer here
+				<span class="caret"></span>
+				</button>
+				<select data-placeholder  id="q4">
+					<option value></option>
+					<option value="1">1 (Strongly Disagree) </option>
+					<option value="2">2 </option>
+					<option value="3">3 </option>
+					<option value="4">4 </option>
+					<option value="5">5 (Strongly Agree) </option>
+				</select>
+				<div id="result"></div>
+			</div>
+		</div>
 
+		<div class="row">
+			<h1>Question 5</h1>
+			<h4>I cannot stand a messy room. I require order and cleanliness.</h4>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Select your answer here
+				<span class="caret"></span>
+				</button>
+				<select data-placeholder  id="q5">
+					<option value></option>
+					<option value="1">1 (Strongly Disagree) </option>
+					<option value="2">2 </option>
+					<option value="3">3 </option>
+					<option value="4">4 </option>
+					<option value="5">5 (Strongly Agree) </option>
+				</select>
+				<div id="result"></div>
+			</div>
+		</div>
 
+		<div class="row">
+			<h1>Question 6</h1>
+			<h4>It is okay to bend the truth if it hurts someone dear to me.</h4>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Select your answer here
+				<span class="caret"></span>
+				</button>
+				<select data-placeholder  id="q6">
+					<option value></option>
+					<option value="1">1 (Strongly Disagree) </option>
+					<option value="2">2 </option>
+					<option value="3">3 </option>
+					<option value="4">4 </option>
+					<option value="5">5 (Strongly Agree) </option>
+				</select>
+				<div id="result"></div>
+			</div>
+		</div>
 
+		<div class="row">
+			<h1>Question 7</h1>
+			<h4>I am like a stone. I remain cool and collected, even under undue amounts of stress.</h4>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Select your answer here
+				<span class="caret"></span>
+				</button>
+				<select data-placeholder  id="q7">
+					<option value></option>
+					<option value="1">1 (Strongly Disagree) </option>
+					<option value="2">2 </option>
+					<option value="3">3 </option>
+					<option value="4">4 </option>
+					<option value="5">5 (Strongly Agree) </option>
+				</select>
+				<div id="result"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<h1>Question 8</h1>
+			<h4>I make future decisions based on what has been proven to work in the past.</h4>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Select your answer here
+				<span class="caret"></span>
+				</button>
+				<select data-placeholder  id="q8">
+					<option value></option>
+					<option value="1">1 (Strongly Disagree) </option>
+					<option value="2">2 </option>
+					<option value="3">3 </option>
+					<option value="4">4 </option>
+					<option value="5">5 (Strongly Agree) </option>
+				</select>
+				<div id="result"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<h1>Question 9</h1>
+			<h4>I am easily bothered by others.</h4>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Select your answer here
+				<span class="caret"></span>
+				</button>
+				<select data-placeholder  id="q9">
+					<option value></option>
+					<option value="1">1 (Strongly Disagree) </option>
+					<option value="2">2 </option>
+					<option value="3">3 </option>
+					<option value="4">4 </option>
+					<option value="5">5 (Strongly Agree) </option>
+				</select>
+				<div id="result"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<h1>Question 10</h1>
+			<h4>My brain is always humming, producing new ideas.</h4>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Select your answer here
+				<span class="caret"></span>
+				</button>
+				<select data-placeholder  id="q10">
+					<option value></option>
+					<option value="1">1 (Strongly Disagree) </option>
+					<option value="2">2 </option>
+					<option value="3">3 </option>
+					<option value="4">4 </option>
+					<option value="5">5 (Strongly Agree) </option>
+				</select>
+				<div id="result"></div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<a class="btn btn-primary form-control">Submit</a>
+		</div>
 
 		<div>
-			<a href=""></a>
-			<a href=""></a>
+			<hr>
+			<a href="">Friendr API</a>
+			<a href="">Github Repo</a>
 		</div>
 	</div>
 
 <script type="text/javascript">
+
+	$('.dropdown-toggle').dropdown();
+
+	$('#q1').on('change', function(){
+		$('#result').html($(this).val());
+	});
+
+
 	
 </script>
 </body>
