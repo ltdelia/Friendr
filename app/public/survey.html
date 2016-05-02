@@ -2,13 +2,22 @@
 <html>
 <head>
 	
-	<!-- Latest compiled and minified CSS -->
+	<!-- Style.css -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Bootstrap - Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 
-	<!-- Latest compiled and minified JS -->
+	<!-- Chosen jQuery Plugin -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.js"></script>
+
+	<!-- Chosen CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+
+	<!-- Bootstrap - Latest compiled and minified JS -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	<title>Friendr | Start here.</title>
@@ -40,11 +49,7 @@
 			<h1>Question 1</h1>
 			<h4>My ideal Saturday night is at home, curled up with a hot cup of tea and a good book.</h4>
 			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Select your answer here
-				<span class="caret"></span>
-				</button>
-				<select data-placeholder  id="q1">
+				<select class="chosen-select" data-placeholder="Select your answer here" id="q1">
 					<option value></option>
 					<option value="1">1 (Strongly Disagree) </option>
 					<option value="2">2 </option>
@@ -60,11 +65,7 @@
 			<h1>Question 2</h1>
 			<h4>I tend to make my decisions based on my gut, instead of my brain.</h4>
 			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Select your answer here
-				<span class="caret"></span>
-				</button>
-				<select data-placeholder  id="q2">
+				<select class="chosen-select" data-placeholder="Select your answer here" id="q2">
 					<option value></option>
 					<option value="1">1 (Strongly Disagree) </option>
 					<option value="2">2 </option>
@@ -73,18 +74,14 @@
 					<option value="5">5 (Strongly Agree) </option>
 				</select>
 				<div id="result"></div>
-			</div>
+			</div>	
 		</div>
 
 		<div class="row">
 			<h1>Question 3</h1>
 			<h4>I find myself most awake when surrounded by a group of people.</h4>
 			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Select your answer here
-				<span class="caret"></span>
-				</button>
-				<select data-placeholder  id="q3">
+				<select class="chosen-select" data-placeholder="Select your answer here" id="q3">
 					<option value></option>
 					<option value="1">1 (Strongly Disagree) </option>
 					<option value="2">2 </option>
@@ -93,18 +90,14 @@
 					<option value="5">5 (Strongly Agree) </option>
 				</select>
 				<div id="result"></div>
-			</div>
+			</div>	
 		</div>
 
 		<div class="row">
 			<h1>Question 4</h1>
-			<h4>I find myself most awake when surrounded by a group of people.</h4>
+			<h4>I am generally buzzing with energy.</h4>
 			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Select your answer here
-				<span class="caret"></span>
-				</button>
-				<select data-placeholder  id="q4">
+				<select class="chosen-select" data-placeholder="Select your answer here" id="q4">
 					<option value></option>
 					<option value="1">1 (Strongly Disagree) </option>
 					<option value="2">2 </option>
@@ -113,18 +106,14 @@
 					<option value="5">5 (Strongly Agree) </option>
 				</select>
 				<div id="result"></div>
-			</div>
+			</div>	
 		</div>
 
 		<div class="row">
 			<h1>Question 5</h1>
 			<h4>I cannot stand a messy room. I require order and cleanliness.</h4>
 			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Select your answer here
-				<span class="caret"></span>
-				</button>
-				<select data-placeholder  id="q5">
+				<select class="chosen-select" data-placeholder="Select your answer here" id="q5">
 					<option value></option>
 					<option value="1">1 (Strongly Disagree) </option>
 					<option value="2">2 </option>
@@ -133,18 +122,14 @@
 					<option value="5">5 (Strongly Agree) </option>
 				</select>
 				<div id="result"></div>
-			</div>
+			</div>	
 		</div>
 
 		<div class="row">
 			<h1>Question 6</h1>
 			<h4>It is okay to bend the truth if it hurts someone dear to me.</h4>
 			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Select your answer here
-				<span class="caret"></span>
-				</button>
-				<select data-placeholder  id="q6">
+				<select class="chosen-select" data-placeholder="Select your answer here" id="q6">
 					<option value></option>
 					<option value="1">1 (Strongly Disagree) </option>
 					<option value="2">2 </option>
@@ -153,18 +138,14 @@
 					<option value="5">5 (Strongly Agree) </option>
 				</select>
 				<div id="result"></div>
-			</div>
+			</div>	
 		</div>
 
 		<div class="row">
 			<h1>Question 7</h1>
 			<h4>I am like a stone. I remain cool and collected, even under undue amounts of stress.</h4>
 			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Select your answer here
-				<span class="caret"></span>
-				</button>
-				<select data-placeholder  id="q7">
+				<select class="chosen-select" data-placeholder="Select your answer here" id="q7">
 					<option value></option>
 					<option value="1">1 (Strongly Disagree) </option>
 					<option value="2">2 </option>
@@ -173,18 +154,14 @@
 					<option value="5">5 (Strongly Agree) </option>
 				</select>
 				<div id="result"></div>
-			</div>
+			</div>	
 		</div>
 
 		<div class="row">
 			<h1>Question 8</h1>
 			<h4>I make future decisions based on what has been proven to work in the past.</h4>
 			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Select your answer here
-				<span class="caret"></span>
-				</button>
-				<select data-placeholder  id="q8">
+				<select class="chosen-select" data-placeholder="Select your answer here" id="q8">
 					<option value></option>
 					<option value="1">1 (Strongly Disagree) </option>
 					<option value="2">2 </option>
@@ -193,18 +170,14 @@
 					<option value="5">5 (Strongly Agree) </option>
 				</select>
 				<div id="result"></div>
-			</div>
+			</div>	
 		</div>
 
 		<div class="row">
 			<h1>Question 9</h1>
 			<h4>I am easily bothered by others.</h4>
 			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Select your answer here
-				<span class="caret"></span>
-				</button>
-				<select data-placeholder  id="q9">
+				<select class="chosen-select" data-placeholder="Select your answer here" id="q9">
 					<option value></option>
 					<option value="1">1 (Strongly Disagree) </option>
 					<option value="2">2 </option>
@@ -213,18 +186,14 @@
 					<option value="5">5 (Strongly Agree) </option>
 				</select>
 				<div id="result"></div>
-			</div>
+			</div>	
 		</div>
 
 		<div class="row">
 			<h1>Question 10</h1>
 			<h4>My brain is always humming, producing new ideas.</h4>
 			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Select your answer here
-				<span class="caret"></span>
-				</button>
-				<select data-placeholder  id="q10">
+				<select class="chosen-select" data-placeholder="Select your answer here" id="q10">
 					<option value></option>
 					<option value="1">1 (Strongly Disagree) </option>
 					<option value="2">2 </option>
@@ -233,30 +202,72 @@
 					<option value="5">5 (Strongly Agree) </option>
 				</select>
 				<div id="result"></div>
-			</div>
+			</div>	
 		</div>
 		
 		<div class="row">
-			<a class="btn btn-primary form-control">Submit</a>
+			<button type="button" class="btn btn-primary btn-lg form-control" data-toggle="modal" data-target="#myModal" id="submission"><span class="glyphicon glyphicon-ok"> Submit</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			    	<div class="modal-header">
+			        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        	<h4 class="modal-title" id="myModalLabel"></h4>
+			      	</div>
+			      	<div class="modal-body"></div>
+			      	<div class="modal-footer">
+			        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      	</div>
+			    </div>
+			  	</div>
+			</div>
 		</div>
 
 		<div>
 			<hr>
 			<a href="">Friendr API</a>
+			<a> | </a>
 			<a href="">Github Repo</a>
 		</div>
 	</div>
 
 <script type="text/javascript">
 
-	$('.dropdown-toggle').dropdown();
+	// Chosen dropdowns
+	$('.chosen-select').chosen();
 
-	$('#q1').on('change', function(){
-		$('#result').html($(this).val());
-	});
+	// Button click event
+	$('#submission').on('click', function(){
+		// create a new object, grabbing the values of the survey
+		var scoreArray = [];
+		var friendData = {
+			name: $('#name').val().trim(),
+			photo: $('#photo').val().trim(),
+			scores: scoreArray
+		}
+		for (var i=1; i<=10; i++){
+			var score =	Number($('#q'+i).val().trim());
+			scoreArray.push(score);
+		}
+		// console.log(friendData);
+		// console.log(scoreArray);
+
+		// get the current location window.location.origin
+		var currentURL = window.location.origin;
+		// post the submission to the Friendr API
+		$.post(currentURL+'/api/friends', friendData,
+			function(response){
+				console.log(response);
+
+		return false;
+		
+		});
+
+	})
 
 
-	
 </script>
 </body>
 </html>
