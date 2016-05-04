@@ -230,7 +230,7 @@
 			<hr>
 			<a href="">Friendr API</a>
 			<a> | </a>
-			<a href="">Github Repo</a>
+			<a href="https://github.com/ltdelia/Friendr">Github Repo</a>
 		</div>
 	</div>
 
@@ -264,6 +264,13 @@
 	return false;
 	})
 
+	$.ajax({url:currentURL+'/api/friends', method:'GET'})
+		.done(function(friend){
+			var name = friend.name;
+			var photohref = friend.photo;
+			$('.modal-header').append("Your best match is: " + name);
+			$('.modal-body').append('<img src='+photohref+'</img>');
+		})
 </script>
 </body>
 </html>
