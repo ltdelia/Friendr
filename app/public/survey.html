@@ -264,6 +264,8 @@
 	return false;
 	})
 
+	// display the match to the HTML in a modal
+	// NOTE: The modal feature is currently not functioning in this build
 	$.ajax({url:currentURL+'/api/friends', method:'GET'})
 		.done(function(friend){
 			var name = friend.name;
