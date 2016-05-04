@@ -64,6 +64,8 @@ module.exports = function(app){
 		var match = allMyFriends[matchIndex];
 		console.log("Your best match is: " + match.name);
 
+		res.json(match);
+
 		diffSum = 0;
 	})
 }
