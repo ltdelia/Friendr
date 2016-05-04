@@ -8,43 +8,62 @@ module.exports = function(app){
 	})
 
 	app.post('/api/friends', function(req, res){
-		// push the submitted data to the allMyFriends array
+		// Adding the form data (a friend) as a JSON to the API
 		allMyFriends.push(req.body);
 
-		var diffs = [];
-		var diffSum = 0;
-		// loop through the allMyFriends array of friends
-		for(var i=0; i<allMyFriends.length-1; i++){
-			// loop through the scores of that friend
-			for(var j=0; j<allMyFriends[i].scores.length; j++){
-				if(allMyFriends[i] == undefined){
-					diffs=[];
-				}else{
-					// calculate the difference in scores
-					var difference = Math.abs(allMyFriends[i].scores[j] - allMyFriends[i+1].scores[j]);	
-					console.log("The difference between "+allMyFriends[i].scores[j]+" and"+allMyFriends[i+1].scores[j]+" is "+difference);
-					diffs.push(difference);
-				}
-			}
-			// add up the difference
-			for(var k=0; k<diffs.length; k++){
-				diffSum+=diffs[k];
-				console.log(diffSum);
-			}
+		// Since the submitted request was posted as a JSON, we need to convert the scores to integers
+		// This way, we can use them to calculate compatibility later
+		var allScores = [];
+		for(var a=0; a<req.body.scores.length; a++){
+			allScores.push(parseInt(req.body.scores[a]));
 		}
 
-		// current issues
-		// diffs array is not emptying after a second person is added
-		// having trouble handling logic when a third or more people are added 
+		var you = {
+			name: req.body.name,
+			photo: req.body.photo,
+			scores: allScores
+		};
+	 	
+	 	console.log("-----------------------------------------------------");
+	 	console.log(you);
+	 	console.log("-----------------------------------------------------");
 
-		console.log(diffs);
+	 	
+		var totalDifferences = [];
 
-		console.log("The total difference is: " + diffSum);
+		// In order to match the friend to someone already in the API...
+		// loop through the allMyFriends array of friends 
+		for(var i=0; i<allMyFriends.length-1; i++){
+			var diffSum = 0;
+			var diffs=[];
+			console.log(allMyFriends[i]);
+			// loop through the scores of that friend
+			for(var j=0; j<allMyFriends[i].scores.length; j++){
+				// calculate the difference in scores between potential friend and user
+				var difference = Math.abs(allMyFriends[i].scores[j] - you.scores[j]);
+				diffs.push(difference);	
+				diffSum+=difference;
+			}
+			console.log("Differences between " + allMyFriends[i].name +  " and you: " + diffs);
+			console.log("The total difference is: " + diffSum);
+			totalDifferences.push(diffSum);
+			console.log(totalDifferences);
+		}
 
-		// compare the difference between scores, question by question
-		// add up the differences, calculate the totalDifference
-		// use absolute value of the differences
-		// closest match = the one with the "least" amount of difference		
+		// Determine the closest match = the one with the "least" amount of difference.
+		// Set up a prototype to determine the lowest number in our totalDifferences array
+		Array.min = function(totalDifferences){
+			return Math.min.apply(Math, totalDifferences);
+		};		
 
+		var minimum = Array.min(totalDifferences);
+		console.log("The least difference is: " + minimum);
+		// Use the indexOf method to get the index of the lowest number
+		var matchIndex = totalDifferences.indexOf(minimum);
+		// Match it to the index of the corresponding friend
+		var match = allMyFriends[matchIndex];
+		console.log("Your best match is: " + match.name);
+
+		diffSum = 0;
 	})
 }

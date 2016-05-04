@@ -37,6 +37,7 @@
 
 		<div class="row">
 			<h1>All About You!</h1>
+
 			<h4>Name (required)</h4>
 			<input type="name" class="form-control" id="name" placeholder="John Smith">		
 			<h4>Link to Your Photo (required)</h4>
@@ -204,7 +205,7 @@
 				<div id="result"></div>
 			</div>	
 		</div>
-		
+
 		<div class="row">
 			<button type="button" class="btn btn-primary btn-lg form-control" data-toggle="modal" data-target="#myModal" id="submission"><span class="glyphicon glyphicon-ok"> Submit</button>
 
@@ -238,6 +239,9 @@
 	// Chosen dropdowns
 	$('.chosen-select').chosen();
 
+	// get the current location window.location.origin
+	var currentURL = window.location.origin;
+
 	// Button click event
 	$('#submission').on('click', function(){
 		// create a new object, grabbing the values of the survey
@@ -251,22 +255,14 @@
 			var score =	Number($('#q'+i).val().trim());
 			scoreArray.push(score);
 		}
-		// console.log(friendData);
-		// console.log(scoreArray);
 
-		// get the current location window.location.origin
-		var currentURL = window.location.origin;
 		// post the submission to the Friendr API
 		$.post(currentURL+'/api/friends', friendData,
 			function(response){
 				console.log(response);
-
-		return false;
-		
 		});
-
+	return false;
 	})
-
 
 </script>
 </body>
