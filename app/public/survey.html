@@ -263,13 +263,21 @@
 
 		// post the submission to the Friendr API
 		$.post(currentURL+'/api/friends', friendData,
-			function(friend){
-				console.log(friend.name);
-				console.log(friend.photo);
-				$('.modal-header').html("<h3> Your best match is: "+friend.name+"</h3>");
-				$('.modal-body').html("<img src="+friend.photo+">");
+			function(response){
+				console.log(response);
 		});
 	return false;
+
+		// display the match in a modal
+		$.ajax({url: currentURL+'/api/friends', method: 'GET'})
+			.done(function(friend){
+				var name = friend.name;
+				var photosrc = friend.photo;
+				console.log(name);
+				console.log(photo);
+				$('.modal-header').append("<h3> Your best match is: "+name+"</h3>");
+				$('.modal-body').append("<img src="+photosrc+">");
+			})
 	})
 
 </script>
