@@ -30,7 +30,7 @@
 				<h1>Friendr | Survey</h1>
 				<p>Answer a few questions, and we'll let you know who your real friend is.</p>
 				<p>
-					<a class="btn btn-default btn-lg"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+					<a href="/" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
 				</p>
 			</div>
 		</div>
@@ -259,25 +259,19 @@
 			scoreArray.push(score);
 		}
 
-		// $('.modal').css("display", "inline-block");
-
 		// post the submission to the Friendr API
 		$.post(currentURL+'/api/friends', friendData,
 			function(response){
 				console.log(response);
+				var name = response.name;
+				var photosrc = response.photo;
+					$('.modal-header').html("<h3> Your best match is: "+name+"</h3>");
+					$('.modal-body').html("<img class='img-responsive center-block' src="+photosrc+">");
+					$('#myModal').modal('show');
 		});
+
 	return false;
 
-		// display the match in a modal
-		$.ajax({url: currentURL+'/api/friends', method: 'GET'})
-			.done(function(friend){
-				var name = friend.name;
-				var photosrc = friend.photo;
-				console.log(name);
-				console.log(photo);
-				$('.modal-header').append("<h3> Your best match is: "+name+"</h3>");
-				$('.modal-body').append("<img src="+photosrc+">");
-			})
 	})
 
 </script>
